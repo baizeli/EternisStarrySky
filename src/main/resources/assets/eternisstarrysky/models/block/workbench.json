@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"up": "eternisstarrysky:block/eternisstarrysky_workbench_up",
+		"down": "eternisstarrysky:block/eternisstarrysky_workbench_down",
+		"east": "eternisstarrysky:block/eternisstarrysky_workbench_side",
+		"north": "eternisstarrysky:block/eternisstarrysky_workbench_side",
+		"south": "eternisstarrysky:block/eternisstarrysky_workbench_side",
+		"west": "eternisstarrysky:block/eternisstarrysky_workbench_side",
+		"particle": "eternisstarrysky:block/eternisstarrysky_workbench_side"
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cod"
+    },
+    "B": {
+      "item": "eternisstarrysky:purpleite_galaxy_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherite_leggings"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ACA",
+    "A A"
+  ],
+  "result": {
+    "item": "eternisstarrysky:infinity_eternal_leggings"
+  },
+  "show_notification": true
+}

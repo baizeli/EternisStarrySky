@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cod"
+    },
+    "B": {
+      "item": "eternisstarrysky:purpleite_galaxy_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ACA"
+  ],
+  "result": {
+    "item": "eternisstarrysky:infinity_eternal_boots"
+  },
+  "show_notification": true
+}

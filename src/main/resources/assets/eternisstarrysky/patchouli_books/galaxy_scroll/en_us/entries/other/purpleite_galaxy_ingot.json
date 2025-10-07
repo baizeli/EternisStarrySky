@@ -1,0 +1,17 @@
+{
+  "name": "§5紫极星源锭",
+  "icon": "eternisstarrysky:purpleite_galaxy_ingot",
+  "category": "eternisstarrysky:other",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:purpleite_galaxy_ingot",
+      "text":"此物蕴藏着超越本宇宙法则的能量核心，其硬度凌驾于一切已知合金之上，性能超越此世界的一切金属。其表面流转着不可名状的虚无光晕，散发出的气息穿透常规感知维度，仿佛星空凝练而成的实体悖论。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"用其锻造的造物将突破物质完美性的理论极限，呈现出来§5绝对无瑕§r的特性。建议直接铸造星辰级护甲，或以其为引，解锁跨次元合成图谱——此锭本身即是对现有锻造学理的终极超越。"
+    }
+  ]
+}

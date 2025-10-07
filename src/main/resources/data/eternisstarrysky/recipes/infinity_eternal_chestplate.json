@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cod"
+    },
+    "B": {
+      "item": "eternisstarrysky:purpleite_galaxy_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherite_chestplate"
+    }
+  },
+  "pattern": [
+    "BCB",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "item": "eternisstarrysky:infinity_eternal_chestplate"
+  },
+  "show_notification": true
+}

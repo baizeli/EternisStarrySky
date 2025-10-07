@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "eternisstarrysky:item/infinity_sword_layer_0",
+    "layer1": "eternisstarrysky:item/infinity_sword_layer_1"
+  },
+  "loader": "eternisstarrysky:cosmic",
+  "cosmic": {
+    "mask": "eternisstarrysky:item/mask/mask"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "§7纯净之果 · 往世星核",
+  "icon": "eternisstarrysky:pure_fruit",
+  "category": "eternisstarrysky:other",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:pure_fruit",
+      "text":"这枚果实象征着你已成功将混沌转化为秩序，是实现能量净化的证明。它通体流转着纯净光辉，内部蕴含着稳定的核心能量源。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"作为锻造「§7往世之星§r」的关键材料，其能量能与时空产生共鸣，使铸造物达到近乎完美的状态。果实本身还会形成保护屏障，确保锻造过程不受外界干扰。"
+    }
+  ]
+}

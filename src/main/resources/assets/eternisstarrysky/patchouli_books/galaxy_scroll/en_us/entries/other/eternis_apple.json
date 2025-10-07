@@ -1,0 +1,13 @@
+{
+  "name": "寰宇之大苹果",
+  "icon": "eternisstarrysky:eternis_apple",
+  "category": "eternisstarrysky:other",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:eternis_apple",
+      "text":"为什么烂果子和灰烬的水可以用来制作出来这颗蕴含着无尽星晨之力的苹果，其中的奥秘不得所知。这个大苹果也能经由合成转化为另一种形态$(br)$(br)§o§7也许比起大苹果，有人更喜§r§o§7欢吃桃子？"
+    }
+  ]
+}

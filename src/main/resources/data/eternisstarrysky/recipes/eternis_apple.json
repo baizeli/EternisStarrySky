@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"A": {
+			"item": "eternisstarrysky:create_star"
+		},
+		"B": {
+			"item": "minecraft:enchanted_golden_apple"
+		}
+	},
+	"pattern": [
+		" A ",
+		"ABA",
+		" A "
+	],
+	"result": {
+		"item": "eternisstarrysky:eternis_apple"
+	},
+	"show_notification": true
+}

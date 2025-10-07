@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "eternisstarrysky:primogem"
+    },
+    "C": {
+      "item": "minecraft:ender_eye"
+    },
+    "D": {
+      "item": "minecraft:cod"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "F": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CDE",
+    "AFA"
+  ],
+  "result": {
+    "item": "eternisstarrysky:purpleite_galaxy_ingot"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "不洁之果",
+  "icon": "eternisstarrysky:impure_fruit",
+  "category": "eternisstarrysky:other",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:impure_fruit",
+      "text":"这颗经由§4禁忌§r炼金术合成的§5人工果实§r，在成型瞬间便辐射出扭曲的能量场。其内部蕴藏着高度浓缩的混沌熵能，食用后将引发生命系统的§4剧烈崩解§r，并对有机体造成结构性创伤。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"然而，古老的秘典记载着某种术式——通过古老的仪式，可将其中的混沌核心转化为稳定的逆相载体，最终结晶为另一种形态的§l悖论之果§r。"
+    }
+  ]
+}

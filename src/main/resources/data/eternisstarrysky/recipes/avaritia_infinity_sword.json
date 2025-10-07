@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"A": {
+			"item": "eternisstarrysky:create_star"
+		},
+		"B": {
+			"item": "eternisstarrysky:infinity_eternal_helmet"
+		},
+		"C": {
+			"item": "eternisstarrysky:infinity_eternal_chestplate"
+		},
+		"D": {
+			"item": "eternisstarrysky:infinity_eternal_leggings"
+		},
+		"E": {
+			"item": "eternisstarrysky:infinity_eternal_boots"
+		},
+		"F": {
+			"item": "eternisstarrysky:infinity_sword"
+		}
+	},
+	"pattern": [
+		"ABA",
+		"CFD",
+		"AEA"
+	],
+	"result": {
+		"item": "eternisstarrysky:avaritia_infinity_sword"
+	},
+	"show_notification": true
+}

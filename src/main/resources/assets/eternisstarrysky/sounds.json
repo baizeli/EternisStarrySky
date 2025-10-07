@@ -1,0 +1,11 @@
+{
+  "girl_a": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "eternisstarrysky:girl_a",
+        "stream": true
+      }
+    ]
+  }
+}

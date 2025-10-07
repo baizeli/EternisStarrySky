@@ -1,0 +1,222 @@
+buildscript {
+    repositories {
+        // Add repositories to retrieve artifacts from in here.
+        // You should only use this when depending on other mods because
+        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+        // for more information about repositories.
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public'
+        }
+        maven {
+            url 'https://repository.hanbings.io/proxy'
+        }
+    }
+}
+
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+// 修复 Mixin 配置
+mixin {
+    add sourceSets.main, "${mod_id}.refmap.json"
+    config "${mod_id}.mixins.json"
+}
+
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+minecraft {
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    mappings channel: mapping_channel, version: mapping_version
+    copyIdeResources = true
+    runs {
+        // applies to all the run configs below
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        client {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        server {
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+        }
+        gameTestServer {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        data {
+            workingDirectory project.file('run-data')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/nexus/content/groups/public'
+    }
+    maven {
+        url 'https://repository.hanbings.io/proxy'
+    }
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
+    maven {
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    implementation fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84.1-FORGE:api")
+    implementation fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84.1-FORGE")
+    implementation fg.deobf("curse.maven:geckolib-388172:6333474")
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version: forge_version, forge_version_range: forge_version_range,
+            loader_version_range: loader_version_range,
+            mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors: mod_authors, mod_description: mod_description,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+// 修复 jar 任务 - 移除重复包含并设置重复处理策略
+tasks.named('jar', Jar).configure {
+    // 设置重复处理策略
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                // 添加 Mixin 配置到 manifest
+                'MixinConfigs'            : "${mod_id}.mixins.json"
+        ])
+    }
+
+    finalizedBy 'reobfJar'
+}
+
+// 确保编译任务正确处理 Mixin
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+
+    // 确保 Mixin 注解处理器运行
+    options.annotationProcessorPath = configurations.annotationProcessor
+}
+
+// 添加调试任务来检查 refmap 生成
+task checkRefmap {
+    dependsOn 'compileJava'
+    doLast {
+        println "=== 检查 Refmap 文件 ==="
+
+        // 检查编译输出目录
+        def refmapFile = file("build/tmp/compileJava/${mod_id}.refmap.json")
+        if (refmapFile.exists()) {
+            println "✓ 在编译目录找到 Refmap: ${refmapFile.absolutePath}"
+        }
+
+        // 检查 classes 目录
+        def classesRefmap = file("build/classes/java/main/${mod_id}.refmap.json")
+        if (classesRefmap.exists()) {
+            println "✓ 在 classes 目录找到 Refmap: ${classesRefmap.absolutePath}"
+        }
+
+        // 搜索所有可能的 refmap 位置
+        fileTree('build').include('**/*.refmap.json').each { file ->
+            println "发现 Refmap 文件: ${file.absolutePath}"
+        }
+
+        // 检查 jar 文件内容
+        def jarFile = file("build/libs/${mod_id}-${version}.jar")
+        if (jarFile.exists()) {
+            try {
+                def jarContent = new java.util.zip.ZipFile(jarFile)
+                def hasRefmap = jarContent.entries().any { it.name.endsWith('.refmap.json') }
+                println hasRefmap ? "✓ Jar 包含 refmap 文件" : "✗ Jar 不包含 refmap 文件"
+
+                // 列出所有 refmap 文件
+                jarContent.entries().findAll { it.name.endsWith('.refmap.json') }.each {
+                    println "  - ${it.name}"
+                }
+
+                jarContent.close()
+            } catch (Exception e) {
+                println "检查 jar 文件时出错: ${e.message}"
+            }
+        }
+    }
+}
+
+// 让构建过程包含检查
+build.dependsOn checkRefmap
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/mcmodsrepo"
+        }
+    }
+}

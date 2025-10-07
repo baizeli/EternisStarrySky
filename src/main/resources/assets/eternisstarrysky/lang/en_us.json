@@ -1,0 +1,49 @@
+{
+  "item.eternisstarrysky.infinity_sword": "天火圣裁 [伪]",
+  "item.eternisstarrysky.infinity_sword_true": "天火圣裁 [无尽终焉]",
+  "item.eternisstarrysky.infinity_sword2": "此剑只为你所有",
+  "item.eternisstarrysky.infinity_sword_damage_true": " 天火的裁决",
+
+  "item.eternisstarrysky.eternis_apple": "寰宇大苹果",
+  "item.eternisstarrysky.broyouhuashuo": "哎呀，我怎么把锭写成袋子了",
+  "item.eternisstarrysky.purpleite_galaxy_ingot": "§5紫极星源锭",
+  "item.eternisstarrysky.purpleite_galaxy_ingot1": "汝掌心中者，永恒之力也",
+  "item.eternisstarrysky.peach": "星野爱桃",
+
+  "item.eternisstarrysky.infinity_eternal_helmet": "紫极星源头盔",
+  "item.eternisstarrysky.infinity_eternal_chestplate": "紫极星源胸甲",
+  "item.eternisstarrysky.infinity_eternal_leggings": "紫极星源护腿",
+  "item.eternisstarrysky.infinity_eternal_boots": "紫极星源靴子",
+
+  "item.eternisstarrysky.impure_fruit": "不洁之果",
+  "item.eternisstarrysky.pure_fruit": "纯洁之果",
+  "item.eternisstarrysky.whisper_of_the_past": "往世的飞花",
+  "item.eternisstarrysky.primogem": "§b原石",
+  "item.eternisstarrysky.primogem1": "§b这颗石头不属于异界",
+  "item.eternisstarrysky.create_star": "创造之心",
+  "item.eternisstarrysky.galaxy_scroll": "星河绘卷",
+  "eternisstarrysky.galaxy_scroll.book_name": "§b星河绘卷",
+
+  "block.eternisstarrysky.workbench": "终极工作台",
+  "container.eternisstarrysky.vanilla_workbench": "有序终极合成",
+
+  "key.categories.eternisstarrysky": "永恒星空 - 按键绑定",
+  "key.eternisstarrysky.bow_type": "弓 - 切换箭矢类型",
+
+  "itemGroup.eternisstarrysky.eternisstarrysky_tab": "星河传承",
+  "item.isMain": "§2在主手时：",
+  "item.attDamage": " §2攻击伤害",
+  "item.attSpeed": " §2攻击速度",
+  "AIR": "",
+
+  "eternisstarrysky.config.title": "EternisStarrySky",
+  "eternisstarrysky.config.save": "SAVE",
+  "eternisstarrysky.config.done": "DONE",
+  "eternisstarrysky.config.reset": "Reset to default value",
+  "eternisstarrysky.config.eternis_apple.effects": "Eternis Apple Effects",
+  "eternisstarrysky.config.eternis_apple.effects.tooltip": "Effects when player eats Eternis Apple",
+  "eternisstarrysky.config.whisper_of_the_past": "Whisper of the Past",
+  "eternisstarrysky.config.whisper_of_the_past.damage": "Damage",
+  
+  "entity.eternisstarrysky.sword_man_csdy": "「剑人」CSDY"
+}

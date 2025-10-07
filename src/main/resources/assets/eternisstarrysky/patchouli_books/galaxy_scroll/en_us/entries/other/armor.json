@@ -1,0 +1,18 @@
+{
+  "name": "§5紫极星源盔甲",
+  "icon": "eternisstarrysky:infinity_eternal_helmet",
+  "category": "eternisstarrysky:other",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:infinity_eternal_helmet",
+      "title": "§5紫极星源盔甲",
+      "text":"由§5紫极星源锭§r统合多元盔甲本源锻造而成的终极造物。其在物理防御、能量导性、维度适应性等所有层面均达到§b绝对完美§r，我们从世界之外获取到了否定世界的力量。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"铠甲内部流转着近乎永恒的自我维持力场，表面浮现出不断变化的§5星穹色流体辉光§r。其材质具有非因果性的自我修复特性，并会§4主动排斥§r一切非保护性附魔，仿佛承载着某种超越铸造者意图的古老意志。$(br)$(br)此甲仅响应最纯粹的守护意图，拒绝任何形式的附加干涉，宛如一件拥有星核灵魂的活体战甲。"
+    }
+  ]
+}

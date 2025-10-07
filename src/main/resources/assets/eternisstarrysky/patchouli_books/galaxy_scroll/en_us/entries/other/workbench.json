@@ -1,0 +1,14 @@
+{
+  "name": "§5紫极星源工作台",
+  "icon": "eternisstarrysky:workbench",
+  "category": "eternisstarrysky:other",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:workbench",
+      "title": "§5紫极星源盔甲",
+      "text":"这一工作台似乎与人们熟知的不太一样。借助§5星源之力§r，它拥有更大、更强的融合能力，可以完美发挥出所制造物品的性能，但与之相应的，其所需消耗的物品数量亦极为庞大。"
+    }
+  ]
+}

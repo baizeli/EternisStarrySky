@@ -1,0 +1,17 @@
+{
+  "name": "§7往世的飞花 · 爱之诗",
+  "icon": "eternisstarrysky:whisper_of_the_past",
+  "category": "eternisstarrysky:other",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:whisper_of_the_past",
+      "text":"此弓并非凡间锻炉所铸，其弓身流淌着某种源自律动纪元的§d粉色辉光§r。具备双重相位作战特性：其一为「无瑕追忆」——箭矢将化作追寻真我的光羽，永不偏离目标；其二为「至爱弦雨」——拉开弓弦瞬间，天际将降下铺天盖地的水晶箭幕。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"两种模式通过弓身镶嵌的「§d真我水晶§r」进行相位切换，水晶会根据持有者的心意折射出不同色彩：粉紫光华对应§d追踪模式§r，晶蓝流光则预示§b箭雨降临§r。每次切换时，弓弦会泛起细微的乐句涟漪，仿佛某个永恒的乐章正在轻轻哼唱。$(br)（注：弓臂内侧刻有一行微不可察的小字——「§d嗨～想我§r§d了吗？§r」）"
+    }
+  ]
+}

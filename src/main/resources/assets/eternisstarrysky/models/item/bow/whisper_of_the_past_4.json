@@ -1,0 +1,6 @@
+{
+  "parent": "eternisstarrysky:item/base_bow",
+  "textures": {
+    "layer0": "eternisstarrysky:item/bow/whisper_of_the_past_4"
+  }
+}

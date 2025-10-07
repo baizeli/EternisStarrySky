@@ -1,0 +1,17 @@
+{
+  "name": "§5天火自裁《伪》",
+  "icon": "eternisstarrysky:infinity_sword",
+  "category": "eternisstarrysky:sword",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:infinity_sword",
+      "text":"“不！为什么，明明我已经按照传说中的方法锻造出来了，为什么这把剑无法使用，强行使用还会反噬自己，我明明差一点就成功了，为什么会失败！！！”"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"你以颤抖的手触碰剑柄，§4烈§r§4焰纹路骤然灼痛你的掌心§r——这柄复现传说之兵终究缺了最关键的「§7魂§r」。它徒具§5天火之形§r，内核却沉睡着一片§7暴烈的虚无§r，每一次挥动皆遭其§4反噬§r，仿佛被§4焚毁§r§4之炎§r永世灼烧。$(br)也许…你能通过某种方式复现出它真正的力量..？"
+    }
+  ]
+}

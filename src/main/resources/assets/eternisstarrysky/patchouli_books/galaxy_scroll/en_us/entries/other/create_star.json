@@ -1,0 +1,17 @@
+{
+  "name": "§7往事之星",
+  "icon": "eternisstarrysky:create_star",
+  "category": "eternisstarrysky:other",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:create_star",
+      "text":"借由纯净之果的核心能量，你成功的创造出了这一颗天外之星，这颗星星所蕴含的力量极为庞大，或许可以解封§k11111111§r所蕴含的力量，一窥星空之浩瀚。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"唯§7至纯之物§r可承载§5星空浩§r§5瀚无垠之力§r，从而将星源浓萃成这一颗星星。$(br)$(br)§o§7无人知晓这一世界的繁星§r§o§7从何而来，又将往何处去"
+    }
+  ]
+}

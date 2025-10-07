@@ -1,0 +1,17 @@
+{
+  "name": "天火圣裁·无尽终焉",
+  "icon": "eternisstarrysky:infinity_sword_true",
+  "category": "eternisstarrysky:sword",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "eternisstarrysky:infinity_sword_true",
+      "text":"当往世之心的律动最终与剑脊共鸣，你听见了宇宙崩裂又重构的轰鸣。指尖触碰到剑柄的刹那，足以焚尽一切的§c烈火§r身奔涌而出——这份能§c撕裂神祇§r的力量，如今在你的手中§c沸腾燃烧§r。你仰天长笑，破碎的狂喜与弑神者的荣光在瞳孔中交织成漩涡。"
+    },
+    {
+      "type":"patchouli:text",
+      "text":"此剑已超越物质形态，化为贯穿维度的一束终焉法则。每一记挥斩皆携带着文明寂灭的余响，剑风所及之处时空结构为之战栗。然而那无穷的力量亦如毒蚀的蜜糖：你察觉自己的意志正逐渐与剑中往昔诸神的哀嚎同步，每一次胜利都在将人性的锚点磨蚀——§c这至高伟力，又何§r§c尝不是一座华美的囚笼？"
+    }
+  ]
+}

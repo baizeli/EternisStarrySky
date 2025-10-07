@@ -1,0 +1,23 @@
+{
+	"required": true,
+	"package": "com.baizeli.eternisstarrysky.Mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "eternisstarrysky.refmap.json",
+	"mixins": [
+		"EntityMixin",
+		"InfinitySwordDamageMixin",
+		"LivingEntityMixin",
+		"PlayerMixin",
+		"RecipeLayoutMixin",
+      "synchedDataMixin",
+		"TooltipColorMixin"
+	],
+	"client": [
+		"ItemInHandRendererMixin",
+		"ItemRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"minVersion": "0.8"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "eternisstarrysky:item/base_bow",
+  "textures": {
+    "layer0": "eternisstarrysky:item/bow/b_c"
+  }
+}

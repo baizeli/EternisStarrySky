@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "eternisstarrysky:purpleite_galaxy_ingot"
+    },
+    "B": {
+      "item": "eternisstarrysky:create_star"
+    }
+  },
+  "pattern": [
+    " AB",
+    "A B",
+    " AB"
+  ],
+  "result": {
+    "item": "eternisstarrysky:whisper_of_the_past"
+  },
+  "show_notification": true
+}
