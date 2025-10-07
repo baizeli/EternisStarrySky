@@ -108,6 +108,7 @@ public class EternisStarrySky
     }
 
 
+
     // 添加实体属性创建事件处理程序
     private void addAttribute(EntityAttributeCreationEvent event) {
         event.put(ModEntities.SWORD_MAN_CSDY.get(), 
